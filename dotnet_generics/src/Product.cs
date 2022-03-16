@@ -1,14 +1,20 @@
-namespace src
-{
-    public class Product
-    {
-        public string pname { get; set; }
-        public string price { get; set; }
-        public int quantity { get; set; }
-        public string type { get; set; }
+using System;
+namespace src{
+    class Product{
+        public string _name ;
+        public string _type ;
+        public int _quantity;
+        public double _price ;
 
-       
-
+        public Product(){
+            
+        }
+        public Product(string name,double price ,int quantity ,string type){
+            this._name = name;
+            this._type = type;
+            this._quantity = quantity;
+            this._price = price;
+        }
 
     }
 }
