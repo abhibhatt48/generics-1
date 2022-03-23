@@ -21,7 +21,7 @@ namespace src
             var products = inventory.findByType("Leafy green");
             Console.WriteLine("Total number of products of type {0} : {1}","Leafy green",products.Count());
             foreach (var product in products){
-                Console.WriteLine($"{product._name} {product._quantity} Rs.{product._price}");
+                Console.WriteLine($"{product.name} {product.quantity} Rs.{product.price}");
             }
             inventory.remove("garlic");
             inventory.addQuantity("cabbage",50);

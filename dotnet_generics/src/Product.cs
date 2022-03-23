@@ -1,19 +1,19 @@
 using System;
 namespace src{
     class Product{
-        public string _name ;
-        public string _type ;
-        public int _quantity;
-        public double _price ;
+        public string name ;
+        public string type ;
+        public int quantity;
+        public double price ;
 
         public Product(){
             
         }
         public Product(string name,double price ,int quantity ,string type){
-            this._name = name;
-            this._type = type;
-            this._quantity = quantity;
-            this._price = price;
+            this.name = name;
+            this.type = type;
+            this.quantity = quantity;
+            this.price = price;
         }
 
     }

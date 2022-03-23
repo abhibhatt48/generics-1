@@ -16,7 +16,7 @@ namespace src{
         public Product findByName(string name){
 
             foreach(var item in this.inventory){
-                if(item._name == name){
+                if(item.name == name){
                     return item;
                 }
             }
@@ -25,7 +25,7 @@ namespace src{
         public List<Product> findByType(string type){
             var temp = new List<Product>();
             foreach(var item in this.inventory){
-                if(item._type == type){
+                if(item.type == type){
                     temp.Add(item);
                 }
             }
@@ -33,7 +33,7 @@ namespace src{
         }
         public void remove(string name){
             foreach(var item in inventory.ToList()){
-                if(item._name == name){
+                if(item.name == name){
                     try{
                         inventory.Remove(item);
                     }catch(Exception ){
@@ -46,10 +46,10 @@ namespace src{
 
         public void addQuantity(string name,int quantity){
             foreach(var item in inventory){
-                if(item._name == name){
-                    Console.WriteLine($"{name}\'s Current Quantity {item._quantity}");
+                if(item.name == name){
+                    Console.WriteLine($"{name}\'s Current Quantity {item.quantity}");
                     item._quantity += quantity;
-                    Console.WriteLine($"{item._name}'s updated quantity (+){quantity} : {item._quantity}");
+                    Console.WriteLine($"{item.name}'s updated quantity (+){quantity} : {item.quantity}");
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace src{
             
             foreach(var item in items) {
                 var x = this.findByName(item.Key);
-                bill += (x._price*item.Value);
+                bill += (x.price*item.Value);
             }
             Console.WriteLine("Amount: " + bill);
         }
